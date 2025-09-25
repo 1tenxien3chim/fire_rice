@@ -21,7 +21,7 @@
     
 }
 html {
-    font-size:14px; 
+    font-size:16px; 
 }
 p {
     margin: 0 0 10px 0;
@@ -59,12 +59,12 @@ ol {
     margin: 0;
 }
 a, span, p , button {
-    font-family:var(--font-primary)!important;
+    font-family:var(--font-primary);
 } 
 body {
     font-family:var(--font-primary);
     background: #fff;
-    font-size: 14px;
+    font-size: 16px;
     font-weight:400;
     line-height: 22px;
     letter-spacing: 0em;
