@@ -415,10 +415,6 @@ strong {
   }
 }
 
-#slider-main {
-  /* Small screens: make arrows smaller and inward */
-  /* Optional: fade overlay for nicer look */
-}
 #slider-main .slider {
   position: relative;
   width: 100%;
@@ -503,7 +499,7 @@ strong {
   background: rgba(255, 255, 255, 0.95);
   transform: scale(1.2);
 }
-@media (max-width: 520px) {
+@media (max-width: 767px) {
   #slider-main .arrow {
     width: 36px;
     height: 36px;
@@ -518,7 +514,7 @@ strong {
     bottom: 8px;
     gap: 6px;
   }
-  #slider-main .dot {
+  #slider-main .dots .dot {
     width: 9px;
     height: 9px;
   }
@@ -531,4 +527,41 @@ strong {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0));
   mix-blend-mode: multiply;
   z-index: 1;
+}
+
+#about-home {
+  background-color: var(--color-white);
+  padding: 100px 0px;
+  background: url("../img/bg-img-about-3.png") no-repeat left 17% top -90px, url("../img/bg-img-about-2.png") no-repeat left 5% bottom -10px, url("../img/bg-img-about-1.png") no-repeat right -20px center;
+}
+#about-home .box-about {
+  max-width: 1000px;
+  margin: auto;
+  background-image: url(../img/bg-about.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  min-height: 634px;
+  padding-top: 115px;
+}
+#about-home .box-about h2 {
+  font-family: var(--font-primary);
+  font-size: 100px;
+  line-height: 150px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+#about-home .box-about h2::after {
+  position: absolute;
+  top: 65px;
+  right: -110px;
+  content: "";
+  width: 100px;
+  height: 15px;
+  background: url(../img/line-title.png);
+}
+#about-home .box-about p {
+  max-width: 605px;
+  font-size: 1.5rem;
+  line-height: 40px;
 }/*# sourceMappingURL=main.css.map */

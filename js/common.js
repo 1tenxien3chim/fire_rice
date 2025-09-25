@@ -15,7 +15,7 @@ toggle.addEventListener("click", () => {
 
     let current = 0;
     const total = slides.length;
-    const autoplayDelay = 4000; // ms
+    const autoplayDelay = 4000; 
     let autoplayTimer = null;
     let isPaused = false;
 

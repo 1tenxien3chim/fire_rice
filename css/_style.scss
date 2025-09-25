@@ -282,7 +282,7 @@
         } 
     }
 }
-#slider-main{
+#slider-main{ 
     .slider {
         position: relative;
         width: 100%; 
@@ -308,7 +308,7 @@
                     width: 100%;
                     height: 100%;
                     object-fit: cover; /* crop vừa đẹp */
-                    display: block;
+                    display: block; 
                 }
             }
         }
@@ -364,16 +364,25 @@
             }
         }
     }   
-    /* Small screens: make arrows smaller and inward */
-    @media (max-width:520px){
-      .arrow { width:36px; height:36px; }
-      .arrow.left { left: 8px; }
-      .arrow.right { right: 8px; }
-      .dots { bottom: 8px; gap:6px; }
-      .dot { width:9px; height:9px; }
+    @media (max-width:767px){
+        .arrow { 
+            width:36px; height:36px; 
+            &.left{
+                left: 8px;
+            }
+            &.right{
+                right: 8px;
+            }
+        } 
+        .dots{
+            bottom: 8px; 
+            gap:6px;
+            .dot{
+                width:9px; 
+                height:9px;
+            }
+        } 
     }
-
-    /* Optional: fade overlay for nicer look */
     .slider::after {
       content: "";
       position:absolute;
@@ -382,5 +391,46 @@
       background: linear-gradient(to top, rgba(0,0,0,0.06), rgba(0,0,0,0));
       mix-blend-mode: multiply;
       z-index:1;
+    }
+}
+// about home
+#about-home{
+    background-color: var(--color-white);
+    padding: 100px 0px;
+    background: 
+        url("../img/bg-img-about-3.png") no-repeat left 17% top -90px,
+        url("../img/bg-img-about-2.png") no-repeat left 5% bottom -10px, 
+        url("../img/bg-img-about-1.png") no-repeat right -20px center; 
+    .box-about{
+        max-width: 1000px;
+        margin: auto;
+        background-image: url(../img/bg-about.png);
+        background-repeat: no-repeat;
+        background-position: right center;
+        min-height: 634px;
+        padding-top: 115px;
+        h2{
+            font-family: var(--font-primary);
+            font-size: 100px;
+            line-height: 150px;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+            &::after{
+                position: absolute;
+                top: 65px;
+                right: -110px;
+                content: "";
+                width: 100px;
+                height: 15px;
+                background: url(../img/line-title.png);
+            } 
+        }
+        p{
+            max-width: 605px;
+            font-size: 1.5rem;
+            line-height: 40px;
+        }
+
     }
 }
