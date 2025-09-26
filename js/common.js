@@ -129,3 +129,37 @@ toggle.addEventListener("click", () => {
     });
 
 })();
+
+// parallax box about
+const imgLeft = document.querySelector('.parallax-left');
+const imgRight = document.querySelector('.parallax-right');
+
+let scrollY = 0;
+
+function smoothParallax() {
+    let offset = window.scrollY;
+    scrollY += (offset - scrollY) * 0.08;
+
+    imgLeft.style.transform = `translateY(${scrollY * 0.05}px)`;
+    imgRight.style.transform = `translateY(${scrollY * 0.08}px)`;
+
+    requestAnimationFrame(smoothParallax);
+ }
+
+smoothParallax();
+
+// slider Origins
+const imgBoxes = document.querySelectorAll(".img-box");
+const sliderText = document.getElementById("sliderText");
+
+imgBoxes.forEach(box => {
+    box.addEventListener("click", () => {
+        document.querySelector(".img-box.active").classList.remove("active");
+        box.classList.add("active");
+        sliderText.classList.add("fade-out");
+        setTimeout(() => {
+            sliderText.textContent = box.getAttribute("data-text");
+            sliderText.classList.remove("fade-out");
+        }, 300); // Delay trùng với transition
+    });
+});
