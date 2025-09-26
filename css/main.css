@@ -832,7 +832,7 @@ strong {
     right: 165px;
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   #OurChef .content h2::after {
     right: 85px;
     top: 20px;
