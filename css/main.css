@@ -690,6 +690,9 @@ strong {
     line-height: 40px;
     margin-bottom: 25px;
   }
+  #Origins h2::before {
+    display: none;
+  }
 }
 #Origins .slider-container {
   display: flex;
@@ -834,8 +837,7 @@ strong {
 }
 @media (max-width: 767px) {
   #OurChef .content h2::after {
-    right: 85px;
-    top: 20px;
+    display: none;
   }
 }
 #OurChef .content-image {
@@ -902,8 +904,12 @@ strong {
     font-size: 1rem;
     line-height: 30px;
   }
+  #OurChef .content-image .box-content-image {
+    min-width: 400px;
+    min-height: 575px;
+  }
   #OurChef .content-image .box-content-image img {
-    max-width: 400px;
+    max-width: 300px;
   }
   #OurChef .image-OurChef img {
     max-width: 160px;
@@ -914,5 +920,31 @@ strong {
     width: 330px;
     height: 39px;
     background-size: contain;
+  }
+}
+
+.banner-pages {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-pages img {
+  width: 100% !important;
+  height: 420px !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.banner-pages h1 {
+  position: absolute;
+  font-size: 100px;
+  line-height: 150px;
+  font-weight: 700;
+  color: var(--color-white);
+}
+@media (max-width: 767px) {
+  .banner-pages h1 {
+    font-size: 60px;
+    line-height: 100px;
   }
 }/*# sourceMappingURL=main.css.map */
